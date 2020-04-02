@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When did Grosjean last crash?</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Fauna+One&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  </head>
+  <body class="font-serif">
+    <div id="preloader-container" class="h-screen w-screen flex justify-center items-center absolute" style="background-color: #333333">
+          <div class="preloader"></div>
+    </div>
+    <div id="bg-element" class="bg-center bg-cover h-screen w-screen absolute" style="background-color: #333333;">
+      <div id="overlay" class="h-screen w-screen flex justify-center items-center py-4 px-4" style="background-color: rgba(111, 115, 114, 0.25);">
+<div id="ellipse" class="flex-col shadow-xl rounded-full justify-between px-12 py-24">
+
+<p class="text-center">It has been</p>
+<p id="middle-text" class="text-center text-6xl font-bold"><span id="amount-span"></span> <span id="races-span"></span></p>
+<p class="text-center">since Romain Grosjean's last crash!</p>
+
+</div>
+<div class="self-end">
+<a href="https://www.kylianjamie.nl" target="_blank" style="color: #e8e8e8">kylianjamie.nl</a>
+</div>
+</div>
+</div>
+
+<style>
+#bg-element {
+  display: none;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+
+#overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+#ellipse {
+  display: none;
+  background: rgb(172,11,41);
+  background: linear-gradient(315deg, rgba(172,11,41,0.9) 0%, rgba(196,12,47,0.9) 100%);
+  width: 448px;
+  height: 448px;
+  position: absolute;
+}
+
+p {
+  font-size: 28px;
+  font-family: 'Fauna One', serif;
+  color: #e8e8e8;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#middle-text{
+opacity: 0;
+  font-family: 'Cinzel', serif;
+  color: #494c4b;
+  transition: opacity 0.5s;
+}
+
+.preloader {
+  background-color: #333333;
+  height: 50px;
+  width:  50px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent hsla(0, 0%, 100%, 0.50);
+  border-radius: 100%;
+  animation: clockwise 0.35s linear infinite;
+  position: absolute;
+  box-shadow:
+    inset 0 1px 3px hsla(0, 0%,   0%, 0.4),
+          0 0   1px hsla(0, 0%, 100%, 0.4);
+}
+
+.preloader:before,
+.preloader:after {
+  box-sizing: border-box;
+  content: '';
+}
+
+@keyframes clockwise {
+  to {transform: rotate(360deg) translatez(0);}
+}
+
+</style>
+<script src="assets/js/main.js" charset="utf-8"></script>
+  </body>
+</html>
