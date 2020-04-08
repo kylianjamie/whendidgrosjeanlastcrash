@@ -66,7 +66,7 @@ function init() {
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
 
-setTimeout(function() {
+      setTimeout(function() {
         document.querySelector('#bg-element').style.opacity = 1;
         animateElements();
 
@@ -75,7 +75,7 @@ setTimeout(function() {
           preloaderContainer.parentNode.removeChild(preloaderContainer);
           img = null;
         }, 500);
-}, 200);
+      }, 200);
 
 
     }
