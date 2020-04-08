@@ -48,14 +48,14 @@ function init() {
   // set random wallpaper image
   function setWallpaper() {
     const bgArray = [
-      "assets/img/1.jpg",
-      "assets/img/2.jpg",
-      "assets/img/3.jpg",
-      "assets/img/4.jpg",
-      "assets/img/5.jpg",
-      "assets/img/6.jpg",
-      "assets/img/7.jpg",
-      "assets/img/8.jpg"
+      "img/1.jpg",
+      "img/2.jpg",
+      "img/3.jpg",
+      "img/4.jpg",
+      "img/5.jpg",
+      "img/6.jpg",
+      "img/7.jpg",
+      "img/8.jpg"
     ]
 
     function randomIndex() {
@@ -70,8 +70,8 @@ function init() {
     img.onload = loadBgImg();
 
     function loadBgImg() {
-      console.log('bg img has been loaded');
-      document.querySelector("#bg-element").style.backgroundImage = 'url(' + randomImgUrl + ')';
+      console.log(img);
+      document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
 
       setTimeout(function() {
