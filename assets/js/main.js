@@ -71,6 +71,7 @@ function init() {
     img.addEventListener('load', loadBgImg);
 
     function loadBgImg() {
+      console.log('image should be loaded');
       document.querySelector('#bg-element').style.display = 'initial';
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
 
