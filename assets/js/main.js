@@ -70,8 +70,7 @@ function init() {
 
     img.addEventListener('load', setTimeout(function() {
       loadBgImg();
-    }, 400);
-    );
+    }, 400));
 
     function loadBgImg() {
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
