@@ -68,11 +68,11 @@ function init() {
     let img = document.createElement("img");
     img.src = 'assets/' + randomImgUrl;
 
-    img.addEventListener('load', setTimeout(function() {
-      loadBgImg();
-    }, 400));
+    img.addEventListener('load', loadBgImg());
 
     function loadBgImg() {
+      setTimeout(function() {
+
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
 
@@ -85,7 +85,7 @@ function init() {
         }, 500);
 
 
-
+}, 400);
     }
   }
 
