@@ -66,7 +66,7 @@ function init() {
     const randomImgUrl = bgArray[randomIndex()];
 
     let img = document.createElement("img");
-    img.src = randomImgUrl;
+    img.src = 'assets/' + randomImgUrl;
 
     img.addEventListener('load', function() {
       loadBgImg();
