@@ -71,12 +71,10 @@ function init() {
     img.addEventListener('load', loadBgImg);
 
     function loadBgImg() {
-      console.log('image should be loaded');
-      document.querySelector('#bg-element').style.display = 'initial';
+
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
+      document.querySelector('#bg-element').style.display = 'initial';
 
-
-      setTimeout(function() {
         document.querySelector('#bg-element').style.opacity = 1;
 
         setTimeout(function() {
@@ -85,7 +83,6 @@ function init() {
           img = null;
         }, 500);
 
-      }, 400);
 
 
     }
