@@ -75,7 +75,7 @@ setTimeout(function() {
           preloaderContainer.parentNode.removeChild(preloaderContainer);
           img = null;
         }, 500);
-}, 500);
+}, 200);
 
 
     }
