@@ -1,4 +1,5 @@
 function init() {
+  setWallpaper();
 
   // global variables to store api data in
   let data,
@@ -31,8 +32,6 @@ function init() {
   // function which fires other functions that use api data
   function handleData() {
     calcLastCrash();
-
-    setWallpaper();
 
     animateCSS('#ellipse', 'bounceInUp', function() {
       animateCSS('#middle-text', 'heartBeat');
