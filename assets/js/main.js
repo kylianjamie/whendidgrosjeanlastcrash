@@ -34,15 +34,6 @@ function init() {
 
     setWallpaper();
 
-    animateCSS('#ellipse', 'bounceInUp', function() {
-      animateCSS('#middle-text', 'heartBeat');
-      document.querySelector('#middle-text').style.opacity = '1';
-    });
-
-    setTimeout(function() {
-      document.querySelector('#ellipse').style.display = 'flex';
-    }, 900);
-
   }
 
   // set random wallpaper image
@@ -75,17 +66,30 @@ function init() {
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
 
+setTimeout(function() {
         document.querySelector('#bg-element').style.opacity = 1;
+        animateElements();
 
         setTimeout(function() {
           const preloaderContainer = document.querySelector('#preloader-container');
           preloaderContainer.parentNode.removeChild(preloaderContainer);
           img = null;
         }, 500);
-
+}, 500);
 
 
     }
+  }
+
+  function animateElements() {
+    animateCSS('#ellipse', 'bounceInUp', function() {
+      animateCSS('#middle-text', 'heartBeat');
+      document.querySelector('#middle-text').style.opacity = '1';
+    });
+
+    setTimeout(function() {
+      document.querySelector('#ellipse').style.display = 'flex';
+    }, 400);
   }
 
   // animate text on hover
