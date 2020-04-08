@@ -65,9 +65,17 @@ function init() {
 
     const randomImgUrl = bgArray[randomIndex()];
 
-    const img = new Image();
-    img.src = 'assets/' + randomImgUrl;
-    img.onload = loadBgImg();
+    let img = document.createElement("img");
+    img.src = randomImgUrl;
+
+    img.addEventListener('load', function() {
+      loadBgImg();
+      img = null;
+    });
+
+    // const img = new Image();
+    // img.src = 'assets/' + randomImgUrl;
+    // img.onload = loadBgImg();
 
     function loadBgImg() {
       console.log(img);
