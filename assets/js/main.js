@@ -68,16 +68,15 @@ function init() {
     let img = document.createElement("img");
     img.src = 'assets/' + randomImgUrl;
 
-    img.addEventListener('load', loadBgImg());
+    img.addEventListener('load', setTimeout(function() {
+      loadBgImg();
+    }, 400);
+    );
 
     function loadBgImg() {
-      console.log('img should be loaded');
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
-      console.log('img set as bg');
 
-      setTimeout(function() {
-        console.log('opacity bg changed');
         document.querySelector('#bg-element').style.opacity = 1;
 
         setTimeout(function() {
@@ -86,7 +85,6 @@ function init() {
           img = null;
         }, 500);
 
-      }, 400);
 
 
     }
