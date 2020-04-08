@@ -68,7 +68,7 @@ function init() {
     let img = document.createElement("img");
     img.src = 'assets/' + randomImgUrl;
 
-    img.addEventListener('load', loadBgImg());
+    img.addEventListener('load', loadBgImg);
 
     function loadBgImg() {
       document.querySelector('#bg-element').style.display = 'initial';
