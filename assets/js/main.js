@@ -66,7 +66,7 @@ function init() {
     const randomImgUrl = bgArray[randomIndex()];
 
     const img = new Image();
-    img.src = randomImgUrl;
+    img.src = '../' + randomImgUrl;
     img.onload = loadBgImg();
 
     function loadBgImg() {
