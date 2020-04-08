@@ -70,6 +70,7 @@ function init() {
     img.onload = loadBgImg();
 
     function loadBgImg() {
+      console.log('bg img has been loaded');
       document.querySelector("#bg-element").style.backgroundImage = 'url(' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
 
