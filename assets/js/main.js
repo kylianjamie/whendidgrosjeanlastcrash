@@ -68,17 +68,9 @@ function init() {
     let img = document.createElement("img");
     img.src = 'assets/' + randomImgUrl;
 
-    img.addEventListener('load', function() {
-      loadBgImg();
-      img = null;
-    });
-
-    // const img = new Image();
-    // img.src = 'assets/' + randomImgUrl;
-    // img.onload = loadBgImg();
+    img.addEventListener('load', loadBgImg());
 
     function loadBgImg() {
-      console.log(img);
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
 
@@ -88,6 +80,7 @@ function init() {
         setTimeout(function() {
           const preloaderContainer = document.querySelector('#preloader-container');
           preloaderContainer.parentNode.removeChild(preloaderContainer);
+          img = null;
         }, 500);
 
       }, 400);
