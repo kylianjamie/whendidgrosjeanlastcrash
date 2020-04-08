@@ -71,10 +71,13 @@ function init() {
     img.addEventListener('load', loadBgImg());
 
     function loadBgImg() {
+      console.log('img should be loaded');
       document.querySelector("#bg-element").style.backgroundImage = 'url(assets/' + randomImgUrl + ')';
       document.querySelector('#bg-element').style.display = 'initial';
+      console.log('img set as bg');
 
       setTimeout(function() {
+        console.log('opacity bg changed');
         document.querySelector('#bg-element').style.opacity = 1;
 
         setTimeout(function() {
